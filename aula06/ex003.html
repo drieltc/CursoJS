@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa.....</title>
+    <style>
+        body{
+            background-color: rgb(13, 14, 13);
+            color: rgb(247, 216, 151);
+            font: normal 15pt Arial;
+        }
+        h1{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1> 
+    <p>Isso aqui é um parágrafo</p>
+    <script>
+        var n1 = window.prompt('digite um número: ')
+        var n2 = window.prompt('digite um outro número: ')
+        window.alert('A concatenação entre os valores é: '+ n1 + n2) //isso aqui irá concatenar os dois números, como esperado
+        var n3 = String(Number(n1) + Number(n2)) //outra maneira de fazer seria colocar o comando do prompt dentro do comando do conversor
+        window.alert('a soma entre os valores é: ' + n3) //isso aqui irá mostrar a soma entre os dois números, como esperado
+        window.alert('o tipo de n3 é ' + typeof n3) //se eu tivesse colocado String(n3) na linha acima, n3 não se tornaria uma string
+    </script>
+</body>
+</html>

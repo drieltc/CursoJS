@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body{
+          background-color: black;
+          color:rgb(255, 231, 164);
+          font: normal 15pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1> Iniciando Estudos com DOM </h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS (parágrafo 0) </p>
+    <p name = "para">outro paragrafo aqui (parágrafo 1)</p>
+    <div id="msg">Clique aqui</div> 
+    <script>
+        window.document.write('escrevendo qlqr coisa aqui <br>')
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write(window.document.URL + '<br>')
+        var p1 = window.document.getElementsByTagName('p')[0] //guardando em p1 o paragrafo 0
+        p1.style.color = 'yellow'
+        window.document.write(`Está escrito assim: ${p1.innerText.toUpperCase()} <br>`) // mostrar o texto do p1
+        //é interessante notar que o innerText puxa apenas o texto puro
+        window.document.write(`Está escrito assim: ${p1.innerHTML.toUpperCase()} <br>`)
+        //já o innerHTML puxa o texto formatado da mesma maneira que foi definido
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Salve salve família' 
+        var e = document.getElementsByName('para')[0]
+        e.innerText = 'teste'
+    </script>
+</body>
+</html>
