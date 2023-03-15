@@ -1,6 +1,129 @@
+//DOM
+    //selecao de elementos
+const title = document.querySelector("#title")
+console.log(title)
+
+const texts = document.querySelectorAll(".text")
+console.log(texts)
+console.log(texts[1])
+
+texts.forEach((text) => {
+    console.log(text.textContent.toUpperCase())
+})
+
+    //modificando elementos
+title.textContent =  "Mudei o texto"
+console.log(title.textContent)
+
+texts[0].innerHTML = "<span> Modificando o primeiro paragrado </span>"
+texts[1].style.backgroundColor = "red"
+texts[2].classList.add('my-class')
+texts[2].classList.remove('text')
+texts[3].remove()
+
+
+    //eventos
+const btn = document.querySelector('#btn')
+btn.addEventListener("click", function(){
+    console.log('clicou')
+    texts[2].style.color='blue'
+})
+
+//classes
+class Product{
+    constructor(name, price){
+        this.name = name
+        this.price = price
+    }
+
+    productDetails(){
+        return `O nome do produto é ${this.name} e o preço é R$ ${this.price}`
+    }
+}
+
+const socks = new Product('Meia', 10.99)
+console.log(socks.name, socks.price)
+
+const shirts = new Product('Camisa Branca', 29.90)
+console.log(shirts.productDetails())
+
+//heranca
+class SuperProduct extends Product{
+    constructor(name, price, size){
+        super(name, price)
+        this.size = size
+    }
+
+    showAdjective(adjective){
+        return `O ${this.name} é muito ${adjective}`
+    }
+
+    //statics
+    static sayHello(){
+        console.log('Opa')
+    }
+}
+
+const tenis = new SuperProduct('Tênis Vermelho', 109.99, '43')
+console.log(tenis)
+console.log(tenis.showAdjective('Maneiro'))
+SuperProduct.sayHello()
+
+//arrow function
+const arrowFunction = (a, b) => {
+    return a+b
+}
+console.log(arrowFunction(2,5))
+
+const simpleArrowFuncion = (a, b) => a+b
+console.log(simpleArrowFuncion(7,9))
+
+//funcoes
+function minhaFuncao(){
+    console.log('Olá, Função')
+}
+
+minhaFuncao()
 //repeticao
+const myList = [1, 2, 3, 4, 5]
+let counter = 0
+while(counter < myList.length){
+    console.log('Imprimindo: ' + myList[counter])
+    counter++
+}
 
+const mySecondList = ['a', 'b', 'c', 'd', 'e']
+for (let counter = 0; counter < mySecondList.length; counter++){
+    console.log(`Imprimindo: ${mySecondList[counter]}`)
+}
 
+//métodos de array -> repetição
+const names = ['Adriel', 'Caio', 'Thullyo', 'Bruna']
+names.forEach(function(name){
+    console.log(`O nome é ${name}`)
+})
+
+const modifiedNames = names.map(function(name){
+    if (name === 'Bruna'){
+        return name = 'Sra. Bruna'
+    }else{
+        return name
+    }
+})
+
+console.log(modifiedNames)
+
+const bigNumbers = [1, 2, 3, 4, 5, 10, 100].filter(function (number){
+    return number >= 5
+})
+
+console.log(bigNumbers)
+
+const sumAll = [10, 20, 30, 40, 50].reduce(function(total = 0, number){
+    return total + number
+})
+
+console.log(sumAll)
 //condicionais
 const a = 10
 if(a > 8){
