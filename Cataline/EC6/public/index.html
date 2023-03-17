@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JS</title>
+    <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Cabeçalho da Página</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>Explicação Rápida</h2>
+			<p>Basicamente eu vou codar meu JavaScript no arquivo <span>main.js</span> na versão mais recente do ES, e através de uma computaria muito louca esse código será transformado em ES5, disponível no arquivo <span>bundle.js</span>. Para que a computaria ocorra é necessário seguir o passo-a-passo abaixo:</p>
+
+			<h2>Passo-a-Passo</h2>
+			<ol>
+				<li>
+					<p>Abrir o WPS na pasta correta digitando o seguinte comando assim que abrir o terminal: </p> <span class="clickable">cd C:\Users\Adriel\Documents\Cursos\CursoJS\Cataline\EC6</span>
+				</li>
+				<li>
+					<p>Rodar o seguinte comando: </p>
+					<code>.\node_modules\.bin\babel ./src/main.js -o ./public/bundle.js -w</code>
+					<p>Alternativamente, pode-se rodar o seguinte comando, já que no nosso arquivo <span>package.json</span> a propriedade <code>scripts</code> tem como informações <code>"dev" : "babel ./src/main.js -o ./public/bundle.js -w"</code></p>
+					<code class="clickable">npm run dev</code>
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Seção 2</h2>
+			<p>Conteúdo da seção 2.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>Rodapé da Página.</p>
+	</footer>
+</body>
+</html>
