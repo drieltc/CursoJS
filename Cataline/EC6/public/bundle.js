@@ -1,8 +1,10 @@
 "use strict";
 
-var person = {
-  name: 'Adriel'
-};
-console.log(person.name);
-person.name = 'Driel';
-console.log(person.name);
+var cars = ['fusca', 'civic', 'hb20'];
+var hasFucas = cars.some(function (car) {
+  return car === 'fusca';
+});
+var hasBmw = cars.some(function (car) {
+  return car === 'bmw';
+});
+console.log(hasFucas, hasBmw);

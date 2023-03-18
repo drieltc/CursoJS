@@ -1,5 +1,11 @@
-const person = {name: 'Adriel'}
-console.log(person.name)
+const cars = ['fusca', 'civic', 'hb20']
 
-person.name = 'Driel'
-console.log(person.name)
+const hasFucas = cars.some(function(car){
+    return car === 'fusca'
+})
+
+const hasBmw = cars.some(function(car){
+    return car === 'bmw'
+})
+
+console.log(hasFucas, hasBmw)
